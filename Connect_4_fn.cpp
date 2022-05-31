@@ -121,56 +121,6 @@ void set_position() {
 	std::cout << "PLayer " << player << "'s turn (Enter 0 - 9): \n";
 	std::cin >> user_choice;
 
-	while( typeid(user_choice).name() != "i"  && a == 0) {
-
-		a++;
-		std::cout << "Error! PLayer " << player << "'s turn (Enter 0 - 9): \n";
-		std::cin >> user_choice;
-
-		if( typeid(user_choice).name() == "i" ) {
-
-			break;
-
-		} else {
-
-			a--;
-
-		}
-
-	}
-
-	if(user_choice <= 9 && user_choice >= 0) {
-
-		while( board[0][user_choice] != " " ) {
-
-			std::cout << "\nOops, the chosen column is already filled up!\n";
-			std::cout << "PLayer " << player << "'s turn (Enter 0 - 9): \n";
-			std::cin >> user_choice;
-
-			if( board[0][user_choice] == " " ) {
-
-				break;
-
-			}
-
-		}
-
-	} 
-
-	while(user_choice > 9 || user_choice < 0) {
-
-		std::cout << "Invalid number!";
-		std::cout << "PLayer " << player << "'s turn (Enter 0 - 9): \n";
-		std::cin >> user_choice;
-
-		if(user_choice <= 9 && user_choice >= 0) {
-
-			break;
-
-		}
-
-	}
-
 }
 
 // Fill at the bottom of the selected column
